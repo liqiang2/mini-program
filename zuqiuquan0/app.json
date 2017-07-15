@@ -1,0 +1,41 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/find/find",
+    "pages/mine/mine",
+    "pages/login/login",
+    
+    "pages/logs/logs"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "white",
+    "navigationBarTitleText": "足球圈",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath":"/imgs/home.png",
+        "selectedIconPath":"/imgs/home1.png"
+      },
+      {
+        "pagePath": "pages/find/find",
+        "text": "发现",
+        "iconPath": "/imgs/search.png",
+        "selectedIconPath": "/imgs/search1.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "/imgs/mine.png",
+        "selectedIconPath": "/imgs/mine1.png"
+      }
+    ],
+    "selectedColor": "#0dc441"
+  }
+  
+}

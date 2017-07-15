@@ -1,0 +1,49 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="head">
+    <view class="title">
+      <view class="hot">热点</view>
+      <view class="care">关注</view>
+    </view>
+    <view class="nav">
+      <view class="live {{currentTab===0 ? 'active' : ''}}" data-current="0" bindtap="switchNav">足球现场</view>
+      <view class="life {{currentTab===1 ? 'active' : ''}}" data-current="1" bindtap="switchNav">足球生活</view>
+      <view class="girl {{currentTab===2 ? 'active' : ''}}" data-current="2" bindtap="switchNav">足球美女</view>
+     </view>
+  </view>
+  
+  <view class="content">
+    <swiper circular current="{{currentTab}}" bindchange="changeNav">
+      <swiper-item class="item">
+        <block wx:for="{{live}}" wx:key="{{index}}">
+          <view class="imgbox">
+            <image src="{{item.pic}}"></image>
+            <span class="msg">{{item.msg}}</span>
+          </view>
+        </block>
+      </swiper-item>
+
+      <swiper-item class="item">
+        <block wx:for="{{life}}" wx:key="{{index}}">
+          <view class="imgbox">
+            <image src="{{item.pic}}"></image>
+            <span class="msg">{{item.msg}}</span>
+          </view>
+        </block>
+      </swiper-item>
+
+      <swiper-item class="item">
+        <block wx:for="{{girls}}" wx:key="{{index}}">
+          <view class="imgbox">
+            <image src="{{item.pic}}"></image>
+            <span class="msg">{{item.msg}}</span>
+          </view>
+        </block>
+      </swiper-item>
+       
+    </swiper>
+  </view>
+
+  
+
+</view>

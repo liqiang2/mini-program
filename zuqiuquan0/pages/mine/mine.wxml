@@ -1,0 +1,45 @@
+<!--pages/mine/mine.wxml-->
+<view class="mine">
+  <view class="title">个人中心</view>
+  <view class="item">
+    <image class="leftpic" src="/imgs/pikaqiu.png"></image>
+    <view class="right-text">
+      <view class="nickname">我叫小萌</view>
+      <view>我是小萌我怕谁！哈哈哈！</view>
+    </view>
+  </view>
+  
+  <view class="nav">
+    <view class="nav-title {{currentTab===0 ? 'active' : ''}}" data-current="0" bindtap="switchNav">照片（{{photo}}）</view>
+    <view class="nav-title {{currentTab===1 ? 'active' : ''}}" data-current="1" bindtap="switchNav">关注（{{care}}）</view>
+    <view class="nav-title {{currentTab===2 ? 'active' : ''}}" data-current="2" bindtap="switchNav">粉丝（{{fans}}）</view>
+  </view>
+  <swiper circular current="{{currentTab}}" bindchange="changeNav">
+      <swiper-item class="item">
+        <block  >
+          <view class="imgbox">
+            <image mode="aspectFit" src="/imgs/3.jpg"></image>
+          </view>
+        </block>
+      </swiper-item>
+
+      <swiper-item class="item">
+        <block >
+          <view class="imgbox">
+            <image src="/imgs/4.jpg"></image>
+          </view>
+        </block>
+      </swiper-item>
+
+      <swiper-item class="item">
+        <block >
+          <view class="imgbox">
+            <image src="/imgs/5.jpg"></image>
+          </view>
+        </block>
+      </swiper-item>
+       
+    </swiper>
+
+  
+</view>
